@@ -10,17 +10,46 @@
 #include <cassert>
 #include <algorithm>
 #include "Sorter.h"
-//TODO: template this
-//TODO: learn error handling and use it for when input out of bounds of arr
+
 
 void copy(int* copyfrom, int* copyto, int n);
 
 bool equals(int *a, int *b, int n);
 
+void testCase(int i, int* &arr, int& size)
+{
+    switch (i)
+    {
+        case 1:
+        {
+            size=3;
+            arr = new int[size];
+            for (int i=0;i<size; ++i)
+                arr[i] = 0;
+            break;
+        }
+            
+        case 2:
+        {
+            size = 0;
+            arr = new int[size];
+        }
+        case 3:
+        {
+            size = 1;
+            arr = new int[size];
+            arr[0] = 3;
+        }
+            
+                
+    }
+}
+
 int main(int argc, const char * argv[]) {
+    int* arr= nullptr;
+    int ARR_SIZE;
+    testCase(1, arr, ARR_SIZE);
     
-    int arr[] = {4,3,1,0,3,4};
-    const int ARR_SIZE = 6;
     
     int brr[ARR_SIZE];
     int crr[ARR_SIZE];
@@ -40,7 +69,11 @@ int main(int argc, const char * argv[]) {
     s.bubbleSort(brr, ARR_SIZE);
     assert(equals(crr, brr, ARR_SIZE));
     
+    copy(arr, brr, ARR_SIZE);
+    s.mergeSort(brr, ARR_SIZE);
+    assert(equals(crr, brr, ARR_SIZE));
     
+    delete [] arr;
 }
 
 void copy(int* copyfrom, int* copyto, int n)
