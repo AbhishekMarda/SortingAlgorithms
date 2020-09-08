@@ -54,7 +54,7 @@ void Sorter::selectionSort(int *arr, int n)
     }
 }
 
-//TODO: shell sort, quicksort
+//TODO: shell sort
 
 //MARK:- QUICKSORT
 
@@ -70,7 +70,7 @@ void Sorter::quickSort(int arr[], int n)
     
 }
 
-#include <iostream>
+
 void Sorter::divide(int arr[], int& start, int& end, int index, int n)
 {
     swap(arr, index, 0);
@@ -114,7 +114,7 @@ void Sorter::divide(int arr[], int& start, int& end, int index, int n)
         }
         catch (int s)
         {
-            std::cout<<"start is " << start << " and this seems like a bad thing right now.";
+            printf("Quick sort went wrong with value of start as: %d\n", s);
             exit(0);
         }
         
