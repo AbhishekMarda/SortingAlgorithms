@@ -3,27 +3,61 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Sorter::swap(int*, int, int):sort.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "Sorter::mergeSort(int*, int):Sorter.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "main:sort.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "main:main.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "Sorter::insertionSort(int*, int):sort.cpp">
-      </ContextState>
-      <ContextState
          contextName = "Sorter::merge(int*, int, int):Sorter.cpp">
          <PersistentStrings>
             <PersistentString
                value = "*(arr+1)">
             </PersistentString>
+            <PersistentString
+               value = "arr[1]">
+            </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Sorter::swap(int*, int, int):sort.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "main:sort.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Sorter::quickSort(int*, int):Sorter.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "brr[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Sorter::mergeSort(int*, int):Sorter.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Sorter::divide(int*, int&amp;, int&amp;, int, int):Sorter.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr[2]">
+            </PersistentString>
+            <PersistentString
+               value = "arr[0]">
+            </PersistentString>
+            <PersistentString
+               value = "arr[5]">
+            </PersistentString>
+            <PersistentString
+               value = "arr[3]">
+            </PersistentString>
+            <PersistentString
+               value = "arr[1]">
+            </PersistentString>
+            <PersistentString
+               value = "arr[4]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Sorter::insertionSort(int*, int):sort.cpp">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

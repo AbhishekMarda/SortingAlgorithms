@@ -56,11 +56,82 @@ void Sorter::selectionSort(int *arr, int n)
 
 //TODO: shell sort, quicksort
 
+//MARK:- QUICKSORT
+
+void Sorter::quickSort(int arr[], int n)
+{
+    if (n<=1)
+        return;
+    int start,end;
+    divide(arr, start, end, 0, n);
+    
+    quickSort(arr, start+1);
+    quickSort(arr+end, n-end);
+    
+}
+
+#include <iostream>
+void Sorter::divide(int arr[], int& start, int& end, int index, int n)
+{
+    swap(arr, index, 0);
+    start = 1;
+    end = n-1;
+    int centralNum = arr[0];
+    while (start < end)
+    {
+        if (arr[end]<centralNum)
+        {
+            swap(arr, end, start);
+            start++;
+        }
+        else if (arr[start] > centralNum)
+        {
+            swap(arr, end, start);
+            end--;
+        }
+        else
+        {
+            start++;
+            end--;
+        }
+    }
+    if (start == end)
+    {
+        if (arr[start]>centralNum)
+            start--;
+        end++;
+        swap(arr, start, 0);
+        start--;
+    }
+    else if (start > end)
+    {
+        try
+        {
+            if (arr[start]<centralNum && arr[end]>centralNum)
+            {
+                throw start;
+            }
+        }
+        catch (int s)
+        {
+            std::cout<<"start is " << start << " and this seems like a bad thing right now.";
+            exit(0);
+        }
+        
+        int temp = end;
+        end = start;
+        start = temp;
+        
+        swap(arr, 0, start);
+        start--;
+    }
+}
+
 //MARK:- MERGE SORT
 
 void Sorter::mergeSort(int arr[], int n)
 {
-    if (n==0 || n==1)
+    if (n<=1)
         return;
     mergeSort(arr, n/2);
     mergeSort(arr+n/2, n-n/2);
